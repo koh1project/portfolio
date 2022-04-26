@@ -1,0 +1,23 @@
+@use "sass:math"as *;
+
+$font-sizes: (h1: 2.5rem,
+  h2: 2rem,
+  h3: 1.5rem,
+  h4: 1rem,
+  h5: .875rem,
+  h6: 0.75rem,
+  p: 1rem,
+);
+
+
+$base_size: 1;
+$scale: 1.25;
+
+$scale-map: (p: $base_size,
+  h6: div($base_size, pow($scale, 2)),
+  h5: div($base_size, $scale),
+  h4: $base_size,
+  h3: $base_size * $scale,
+  h2: $base_size * pow($scale, 2),
+  h1: $base_size * pow($scale, 3),
+);

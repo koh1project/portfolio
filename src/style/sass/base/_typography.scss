@@ -1,0 +1,44 @@
+@use "../abstracts/mixins";
+@use "../abstracts/maps";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@400;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Serif', serif;
+}
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+@each $element,
+$size in maps.$scale-map {
+  #{$element} {
+    @include mixins.fsizes($size);
+  }
+}

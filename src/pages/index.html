@@ -5,14 +5,88 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/c9f5ef83b0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../style/style.css">
   <title>Portfolio</title>
 </head>
 
-<body>
+<body id="#">
+  <div class="wrapper">
+    <header>
+      <h1>Koichi Tanaka</h1>
+      <nav class="site-navigation">
+        <ul class="menu">
+          <li class="menu-item"> <a href="#aboutme" class="menu-item__link">About Me</a></li>
+          <li class="menu-item"> <a href="#skills" class="menu-item__link">Skills</a></li>
+          <li class="menu-item"> <a href="#project" class="menu-item__link">Project</a></li>
+          <li class="menu-item"> <a href="#contact" class="menu-item__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h2>Hello, I'm Koichi Tanaka</h2>
+          <p>I'm a web developer</p>
+        </div>
+        <div class="hero-image">
+          <img src="../images/hero.png" alt="hero">
+        </div>
+      </section>
+      <section class="about-me" id="aboutme">
+        <div class="about-me__image">
+          <img src="../images/aboutme.png" alt="aboutme">
+        </div>
+        <div class="about-me__text">
+          <h2 class="section-heading">About Me</h2>
+          <p>I am a Full Stack Developer</p>
+        </div>
+      </section>
+      <section class="skills" id="skills">
+        <h2 class="section-heading">Skills</h2>
+        <h3 class="skills-heading">Front</h3>
+        <ul class="skill-list frontend">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
+        <h3 class="skills-heading">Back</h3>
+        <ul class="skill-list backend">
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>MongoDB</li>
+        </ul>
+        <h3 class="skills-heading">Others</h3>
+        <ul class="skill-list others">
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>Heroku</li>
+          <li>Adobe Photoshop</li>
+          <li>Adobe Illustrator</li>
+          <li>Adobe XD</li>
+        </ul>
+      </section>
+      <section class="project" id="project">
+        <h2 class="section-heading">Projects</h2>
+        <article class="project-article">
+          <h3 class="project-heading">
+            Rentool
+          </h3>
+          <p class="project-description">Project description</p>
+          <img src="#" alt="Rentool" class="project-image">
+        </article>
+      </section>
+      <section class="contact" id="contact">
+        <h2 class="section-heading">Contact</h2>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
 
-
-
-<script type="module" src="../js/firebase.js"></script>
+  <script type="module" src="../js/firebase.js"></script>
 </body>
 
 
