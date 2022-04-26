@@ -5,11 +5,22 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass --watch src/style/sass/style.scss:src/style/style.css"
+    "start": "sass --watch src/style/sass/style.scss:src/style/style.css",
+    "compile:sass": "sass src/style/sass/style.scss src/style/style.comp.css",
+    "concat:css": "concat -o src/style/style.concat.css src/style/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/style/style.concat.css -o src/style/style.prefix.css",
+    "compress:css": "sass src/style/style.prefix.css src/style/style.css --style=compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "deploy": "npm-run-all build:css && firebase deploy"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.50.1"
+    "sass": "^1.50.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.15",
+    "postcss-cli": "^8.3.1",
+    "autoprefixer": "^10.2.5",
+    "concat": "^1.0.3"
   }
 }
